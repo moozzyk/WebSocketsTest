@@ -8,11 +8,16 @@
 
 import Cocoa
 
+import SocketRocket
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
+    @IBOutlet weak var urlTextField: NSTextField!
+    @IBOutlet weak var logTextField: NSTextField!
 
+    var webSocket: SRWebSocket!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
@@ -22,6 +27,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
 
-
+    @IBAction func btnConnect(sender: AnyObject) {
+        let url = URL(string: urlTextField.stringValue)!
+        webSocket = SRWebSocket(url:url)
+        webSocket.delegate = WebSocketDelegate(log: logTextField)
+        webSocket.open()
+    }
 }
 

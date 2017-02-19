@@ -13,6 +13,7 @@
 		5AEFF2A61E58A8330008BD12 /* WebSocketsTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEFF2A51E58A8330008BD12 /* WebSocketsTestTests.swift */; };
 		5AEFF2BF1E595CC10008BD12 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEFF2BE1E595CC10008BD12 /* SocketRocket.framework */; };
 		5AEFF2C11E595CD30008BD12 /* SocketRocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEFF2BE1E595CC10008BD12 /* SocketRocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5AEFF2C41E595E300008BD12 /* WebsocketDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEFF2C31E595E300008BD12 /* WebsocketDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		5AEFF2A51E58A8330008BD12 /* WebSocketsTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketsTestTests.swift; sourceTree = "<group>"; };
 		5AEFF2A71E58A8330008BD12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AEFF2BE1E595CC10008BD12 /* SocketRocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketRocket.framework; path = Carthage/Build/Mac/SocketRocket.framework; sourceTree = "<group>"; };
+		5AEFF2C31E595E300008BD12 /* WebsocketDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebsocketDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				5AEFF2971E58A8330008BD12 /* Assets.xcassets */,
 				5AEFF2991E58A8330008BD12 /* MainMenu.xib */,
 				5AEFF29C1E58A8330008BD12 /* Info.plist */,
+				5AEFF2C31E595E300008BD12 /* WebsocketDelegate.swift */,
 			);
 			path = WebSocketsTest;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AEFF2C41E595E300008BD12 /* WebsocketDelegate.swift in Sources */,
 				5AEFF2961E58A8330008BD12 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +353,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
@@ -366,6 +371,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
