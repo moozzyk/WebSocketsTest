@@ -16,6 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var urlTextField: NSTextField!
     @IBOutlet weak var logTextField: NSTextField!
+    @IBOutlet weak var msgTextField: NSTextField!
 
     var webSocket: SRWebSocket!
 
@@ -32,6 +33,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         webSocket = SRWebSocket(url:url)
         webSocket.delegate = WebSocketDelegate(log: logTextField)
         webSocket.open()
+    }
+
+    @IBAction func btnSend(sender: AnyObject) {
+        do {
+            try webSocket.send(string: msgTextField.stringValue)
+        }
+        catch {
+            print(error)
+        }
     }
 }
 

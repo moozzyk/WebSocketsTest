@@ -20,4 +20,9 @@ public class WebSocketDelegate: NSObject, SRWebSocketDelegate {
     public func webSocketDidOpen(_ webSocket: SRWebSocket) {
         log.stringValue += "WebSocket opened"
     }
+
+    // @objc(webSocket:didReceiveMessageWithString:)
+    public func webSocket(_ webSocket: SRWebSocket, didReceiveMessageWith string:String) {
+        log.stringValue += "message received"
+    }
 }

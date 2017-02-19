@@ -16,6 +16,7 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="WebSocketsTest" customModuleProvider="target">
             <connections>
                 <outlet property="logTextField" destination="wyL-Ca-wwy" id="3yF-oD-pR9"/>
+                <outlet property="msgTextField" destination="SmK-1f-Gh5" id="q8g-bj-0z8"/>
                 <outlet property="txtEditUrl" destination="zdP-po-ftN" id="smc-tt-Qa7"/>
                 <outlet property="urlTextField" destination="zdP-po-ftN" id="ihn-SA-qyK"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
@@ -699,6 +700,9 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="btnSendWithSender:" target="Voe-Tx-rLC" id="NAA-1E-BSg"/>
+                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S9z-hr-mBf">
                         <rect key="frame" x="380" y="313" width="92" height="32"/>
@@ -732,7 +736,7 @@
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SmK-1f-Gh5">
                         <rect key="frame" x="80" y="286" width="291" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Xvx-Nz-N9b">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="Hello, World!" drawsBackground="YES" id="Xvx-Nz-N9b">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
